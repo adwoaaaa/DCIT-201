@@ -3,23 +3,20 @@ public class Main {
         try {
             // Create a CommissionEmployee object
             CommissionEmployee employee = new CommissionEmployee("Seth", "Simons", "123-45-6789", 5000.0, 0.2);
-            System.out.println("Employee details:");
+            System.out.println("EMPLOYEE DETAILS:");
             System.out.println(employee);
 
             // Update grossSales and commissionRate
-            System.out.println("\nUpdating employee's gross sales and commission rate.");
+            System.out.println("\nUPDATING EMPLOYEE'S GROSS SALES AND COMMISSION RATE.");
             employee.setGrossSales(7000.0);
             employee.setCommissionRate(0.25);
-            System.out.println("Updated employee details:");
+            System.out.println("UPDATED EMPLOYEE DETAILS:");
             System.out.println(employee);
-          //  System.out.println("Earnings: " + employee.earnings());
-
-
             // Calculate and display earnings
             System.out.printf("%nEarnings: %.2f%n", employee.earnings());
 
             // Test validations
-            System.out.println("\nTesting validations.");
+            System.out.println("\nTESTING EMPLOYEE VALIDATIONS.");
             try {
                 employee.setGrossSales(-1000.0); // Invalid gross sales
             } catch (IllegalArgumentException e) {
@@ -35,16 +32,17 @@ public class Main {
 
             try {
                 // Create a BasePlusCommissionEmployee object
-                BasePlusCommissionEmployee BPCEmployee = new BasePlusCommissionEmployee("Jane", "Smith", "987-65-4321", 6000, 0.12, 1000);
+                BasePlusCommissionEmployee BPCEmployee = new BasePlusCommissionEmployee("Desiree", "Forson", "739-17-9301", 6000, 0.12, 1000);
+                System.out.println("\nBASE PLUS COMMISSION EMPLOYEE DETAILS: ");
                 System.out.println(BPCEmployee);
-
                 // Update base salary and inherited fields
             BPCEmployee.setBaseSalary(1500);
             BPCEmployee.setGrossSales(8000);
             BPCEmployee.setCommissionRate(0.14);
-            System.out.println("Updated Employee Details:\n" + BPCEmployee);
+            System.out.println("\nUPDATED BASE PLUS COMMISSION EMPLOYEE DETAILS:\n" + BPCEmployee);
 
             // Test invalid values
+             System.out.println("\nTESTING BPC-EMPLOYEE VALIDATIONS:");
             BPCEmployee.setBaseSalary(-200);
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
@@ -53,6 +51,7 @@ public class Main {
         try {
             // Create a FullTimeEmployee object
             FullTimeEmployee fullTimeEmp = new FullTimeEmployee("Alice", "FT123", 4000);
+            System.out.println("\nFULL TIME EMPLOYEE DETAILS: ");
             System.out.println("Employee Name: " + fullTimeEmp.getName());
             System.out.println("Employee ID: " + fullTimeEmp.getEmployeeId());
             fullTimeEmp.calculatePay();
