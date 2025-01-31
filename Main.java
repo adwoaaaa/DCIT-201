@@ -12,6 +12,8 @@ public class Main {
             employee.setCommissionRate(0.25);
             System.out.println("Updated employee details:");
             System.out.println(employee);
+          //  System.out.println("Earnings: " + employee.earnings());
+
 
             // Calculate and display earnings
             System.out.printf("%nEarnings: %.2f%n", employee.earnings());
@@ -29,8 +31,41 @@ public class Main {
             } catch (IllegalArgumentException e) {
                 System.out.println("Error: " + e.getMessage());
             }
+
+
+            try {
+                // Create a BasePlusCommissionEmployee object
+                BasePlusCommissionEmployee BPCEmployee = new BasePlusCommissionEmployee("Jane", "Smith", "987-65-4321", 6000, 0.12, 1000);
+                System.out.println(BPCEmployee);
+
+                // Update base salary and inherited fields
+            BPCEmployee.setBaseSalary(1500);
+            BPCEmployee.setGrossSales(8000);
+            BPCEmployee.setCommissionRate(0.14);
+            System.out.println("Updated Employee Details:\n" + BPCEmployee);
+
+            // Test invalid values
+            BPCEmployee.setBaseSalary(-200);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        try {
+            // Create a FullTimeEmployee object
+            FullTimeEmployee fullTimeEmp = new FullTimeEmployee("Alice", "FT123", 4000);
+            System.out.println("Employee Name: " + fullTimeEmp.getName());
+            System.out.println("Employee ID: " + fullTimeEmp.getEmployeeId());
+            fullTimeEmp.calculatePay();
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+
+
         } catch (Exception e) {
             System.out.println("An unexpected error occurred: " + e.getMessage());
         }
+
+
     }
 }
