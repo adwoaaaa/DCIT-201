@@ -17,6 +17,13 @@ class FullTimeEmployee extends Employee{
     public function calculatePay(): string {
         return "FullTimeEmployee Pay: {$this->salary}";
     }
+    
 
+    public function displayDetails(): void {
+        echo "Employee Name: " . $this->getName() . "\n";
+        echo "Employee ID: " . $this->getEmployeeId() . "\n";
+        echo "Salary: {$this->salary}\n";
+    }
+    
 }
 ?>

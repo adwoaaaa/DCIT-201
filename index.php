@@ -1,6 +1,7 @@
 <?php
 include "CommissionEmployee.php";
 include "BasePlusCommissionEmployee.php";
+include "FullTimeEmployee.php";
 
 $employee1 = new CommissionEmployee("Phillipa", "Antwi-Boasiako", "155-76-9081", 654.50, 0.1);
 echo "Employee Details:\n";
@@ -21,4 +22,11 @@ $employee2->displayEmployeeDetails();
 $employee2->setBaseSalary(1255.5);
 echo "\n\nDetails After Base Salary Update:\n";
 $employee2->displayEmployeeDetails();
+
+$employee3 = new FullTimeEmployee("Kofi Edu", "FTE273", 690.50);
+
+echo "\n\nFull Time Employee Details:\n";
+$employee3->displaydetails();
+echo $employee3->calculatePay() . "\n";
+
 ?>
