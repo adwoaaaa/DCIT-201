@@ -24,6 +24,6 @@ class FullTimeEmployee extends Employee{
         echo "Employee ID: " . $this->getEmployeeId() . "\n";
         echo "Salary: {$this->salary}\n";
     }
-    
+
 }
 ?>

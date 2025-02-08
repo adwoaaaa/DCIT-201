@@ -2,6 +2,9 @@
 include "CommissionEmployee.php";
 include "BasePlusCommissionEmployee.php";
 include "FullTimeEmployee.php";
+include "StaffMember.php";
+include "FullTimeStaff.php";
+include "Staff.php";
 
 $employee1 = new CommissionEmployee("Phillipa", "Antwi-Boasiako", "155-76-9081", 654.50, 0.1);
 echo "Employee Details:\n";
@@ -29,4 +32,16 @@ echo "\n\nFull Time Employee Details:\n";
 $employee3->displaydetails();
 echo $employee3->calculatePay() . "\n";
 
+
+
+$staff1 = new FullTimeStaff("Ava Ofori", "FTS001", 5050.00);
+
+$staffManagement = new Staff();
+$staffManagement->addStaff($staff1);
+
+echo"\n\nStaff Details:\n";
+$staffManagement->displayStaff();
+
+$totalAnnualSalary = $staffManagement->calculateTotalAnnualSalary();
+echo "Total Annual Salary of All Staff: {$totalAnnualSalary}\n";
 ?>
