@@ -6,7 +6,9 @@ public class FullTimeEmployee extends Employee{
         this.salary = salary;
 }
 
-public double getSalary() { return salary; }
+    public double getSalary() {
+     return salary; 
+    }
 
     @Override
     public void calculatePay() {

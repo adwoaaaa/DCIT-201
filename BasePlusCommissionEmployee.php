@@ -2,7 +2,7 @@
 class BasePlusCommissionEmployee extends CommissionEmployee{
     private float $baseSalary;
 
-    public function __construct(string $firstName, string $lastName, string $socialSecurityNumber, float $grossSales, float $commisionRate, float $baseSalary){
+    public function __construct(string $firstName, string $lastName, string $socialSecurityNumber, float $grossSales, float $commissionRate, float $baseSalary){
         parent::__construct( $firstName, $lastName, $socialSecurityNumber, $grossSales, $commissionRate);
         $this->setBaseSalary($baseSalary);
     }
@@ -26,7 +26,7 @@ class BasePlusCommissionEmployee extends CommissionEmployee{
     public function displayEmployeeDetails(): void {
         parent::displayEmployeeDetails();
         echo "Base Salary: {$this->baseSalary}\n";
-        echo "Total Earnings: {$this->earnings()}\n";
+       // echo "Total Earnings: {$this->earnings()}\n";
        
     }
 }
