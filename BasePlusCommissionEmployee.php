@@ -13,7 +13,7 @@ class BasePlusCommissionEmployee extends CommissionEmployee{
 
     public function setBaseSalary(float $newSalary): void{
         if ($newSalary <= 0.0){
-            throw new InvalidArgumentException ("Base salary must be greater than 0.oo");
+            throw new InvalidArgumentException ("Base salary must be greater than 0.00");
         }else{
             $this->baseSalary = $newSalary;
         }
@@ -26,7 +26,7 @@ class BasePlusCommissionEmployee extends CommissionEmployee{
     public function displayEmployeeDetails(): void {
         parent::displayEmployeeDetails();
         echo "Base Salary: {$this->baseSalary}\n";
-       // echo "Total Earnings: {$this->earnings()}\n";
+        echo "Total Earnings: {$this->earnings()}\n";
        
     }
 }
